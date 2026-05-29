@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>СҚУ студенттеріне онлайн курстарды ұсыну жүйесі</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <h1>Онлайн оқу курстарын интеллектуалды ұсыну жүйесі</h1>
+      <p>Солтүстік Қазақстан университеті студенттеріне арналған веб-жүйе</p>
+      <a href="#form" class="btn">Курс таңдау</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="about">
+      <div class="container">
+        <h2>Жүйе туралы</h2>
+        <p>
+          Бұл веб-жүйе студенттің мамандығы, оқу деңгейі, қызығушылығы және оқу мақсаты
+          негізінде онлайн оқу курстарын ұсынады. Жүйе HTML, CSS және JavaScript
+          технологиялары арқылы әзірленді.
+        </p>
+      </div>
+    </section>
+
+    <section id="form" class="recommendation">
+      <div class="container">
+        <h2>Студент анкетасы</h2>
+
+        <div class="form-box">
+          <label>Мамандық бағыты:</label>
+          <select id="major">
+            <option value="it">Ақпараттық технологиялар</option>
+            <option value="pedagogy">Педагогика</option>
+            <option value="economy">Экономика</option>
+            <option value="language">Тілдер</option>
+          </select>
+
+          <label>Білім деңгейі:</label>
+          <select id="level">
+            <option value="beginner">Бастапқы</option>
+            <option value="middle">Орта</option>
+            <option value="advanced">Жоғары</option>
+          </select>
+
+          <label>Қызығушылық бағыты:</label>
+          <select id="interest">
+            <option value="programming">Бағдарламалау</option>
+            <option value="web">Веб-әзірлеу</option>
+            <option value="data">Деректерді талдау</option>
+            <option value="ai">Жасанды интеллект</option>
+            <option value="english">Ағылшын тілі</option>
+            <option value="teaching">Оқыту әдістемесі</option>
+            <option value="business">Бизнес</option>
+          </select>
+
+          <label>Оқу мақсаты:</label>
+          <select id="goal">
+            <option value="skill">Практикалық дағдыны дамыту</option>
+            <option value="career">Мансапқа дайындалу</option>
+            <option value="science">Ғылыми жұмысқа қолдану</option>
+            <option value="exam">Емтиханға дайындалу</option>
+          </select>
+
+          <button onclick="recommendCourses()">Ұсыныстарды көру</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="results">
+      <div class="container">
+        <h2>Ұсынылған курстар</h2>
+        <div id="courseResults" class="course-list">
+          <p class="empty">Анкетаны толтырып, ұсыныстарды көріңіз.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="courses">
+      <div class="container">
+        <h2>Курстар базасы</h2>
+        <div class="course-grid" id="allCourses"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Нәби Ақбаян Аманжолқызы | М. Қозыбаев атындағы СҚУ</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
